@@ -1,0 +1,19 @@
+mat-form-field {
+  width: 500px;
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+.login-body {
+  margin-top: 50px;
+}
+
+.login-content {
+  align-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
