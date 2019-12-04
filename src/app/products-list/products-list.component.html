@@ -1,1 +1,7 @@
-<p>products-list works!</p>
+<div class="container products-body">
+  <mat-grid-list cols="4" class="myGridList" gutterSize="20px" rowHeight="450px">
+    <mat-grid-tile *ngFor="let item of products">
+      <app-product-detail [product]="item"></app-product-detail>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
