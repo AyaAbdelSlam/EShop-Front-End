@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { IProduct } from '../models/product';
@@ -10,7 +11,7 @@ import { BaseService } from './baseService';
 })
 export class ProductsService extends BaseService {
 	constructor(private http: HttpClient) {
-		super('https://localhost:5001/api/products/');
+		super(environment.apiUrl + 'products/');
 	}
 
 	public getProducts(): Observable<IProduct[]> {
