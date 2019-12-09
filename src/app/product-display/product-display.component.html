@@ -1,0 +1,24 @@
+<div class="contianer">
+  <mat-card>
+    <mat-card-content>
+      <section>
+        <h1 style="color: rebeccapurple;">{{displayedProduct?.name}}</h1>
+        <div style="text-align: center;">
+          <img style="height: 350px;" src="{{imagesURL[0]}}" alt="Photo of a product item">
+        </div>
+
+        <h1 style="color: red;">{{displayedProduct?.price}}$</h1>
+        <p style="text-align: center;">
+          {{displayedProduct?.fullDescription}}
+        </p>
+      </section>
+      <section align="center">
+        <mat-slider min="1" class="example-margin" step="1" max="100" thumbLabel="true">
+        </mat-slider>
+        <button style="margin-left: 30px;" mat-button><i class="material-icons">
+            add_shopping_cart
+          </i></button>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>

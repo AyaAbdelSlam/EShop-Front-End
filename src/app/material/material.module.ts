@@ -10,7 +10,9 @@ import {
 	MatFormFieldModule,
 	MatInputModule,
 	MatCardModule,
-	MatGridListModule
+	MatGridListModule,
+	MatSliderModule,
+	MatSnackBarModule
 } from '@angular/material';
 
 const MaterialComponents = [
@@ -22,7 +24,9 @@ const MaterialComponents = [
 	MatFormFieldModule,
 	MatInputModule,
 	MatCardModule,
-	MatGridListModule
+	MatGridListModule,
+	MatSliderModule,
+	MatSnackBarModule
 ];
 @NgModule({
 	declarations: [],

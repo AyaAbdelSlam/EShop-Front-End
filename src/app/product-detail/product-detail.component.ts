@@ -15,6 +15,5 @@ export class ProductDetailComponent implements OnInit {
 
 	ngOnInit() {
 		this.productImages = this.product.images.split('|');
-		console.log(this.productImages);
 	}
 }

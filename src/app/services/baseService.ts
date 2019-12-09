@@ -1,8 +1,11 @@
 import { Observable, of } from 'rxjs';
+import { NotificationService } from './notification.service';
 export abstract class BaseService {
 	protected baseUrl: string;
-	constructor(url) {
+	protected notifyService: NotificationService;
+	constructor(url, notifyService: NotificationService) {
 		this.baseUrl = url;
+		this.notifyService = notifyService;
 	}
 
 	/**
@@ -14,7 +17,7 @@ export abstract class BaseService {
 	protected handleError<T>(operation = 'operation', result?: T) {
 		return (error: any): Observable<T> => {
 			// TODO: send the error to remote logging infrastructure
-			console.error(error); // log to console instead
+			//console.error(error); // log to console instead
 
 			// TODO: better job of transforming error for user consumption
 			this.log(`${operation} failed: ${error.message}`);
@@ -26,6 +29,7 @@ export abstract class BaseService {
 
 	/** Log a HeroService message with the MessageService */
 	protected log(message: string) {
-		console.log(`HeroService: ${message}`);
+		// console.log(`HeroService: ${message}`);
+		this.notifyService.showNotification(message);
 	}
 }
