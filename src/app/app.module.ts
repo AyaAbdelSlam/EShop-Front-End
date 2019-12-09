@@ -1,3 +1,4 @@
+import { ProductDisplayComponent } from './product-display/product-display.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 		AppComponent,
 		ProductsListComponent,
 		LoginComponent,
-		ProductDetailComponent
+		ProductDetailComponent,
+		ProductDisplayComponent
 	],
 	imports: [
 		BrowserModule,
