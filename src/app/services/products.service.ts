@@ -17,12 +17,14 @@ export class ProductsService extends BaseService {
 	}
 
 	public getProducts(): Observable<IProduct[]> {
-		return this.http.get<IProduct[]>(this.baseUrl).pipe(catchError(this.handleError('getProducts', [])));
+		return this.http
+			.get<IProduct[]>(this.baseUrl + 'products')
+			.pipe(catchError(this.handleError('getProducts', [])));
 	}
 
 	public getProductById(id: number): Observable<IProduct> {
 		return this.http
-			.get<IProduct>(this.baseUrl + id)
+			.get<IProduct>(this.baseUrl + 'products/' + id)
 			.pipe(catchError(this.handleError('getProductById', {} as IProduct)));
 	}
 }
