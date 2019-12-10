@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment.prod';
 import { NotificationService } from './notification.service';
-import { IUser } from './../models/user';
+import { IUser } from '../shared/models/user';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
