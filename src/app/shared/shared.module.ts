@@ -1,3 +1,4 @@
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
@@ -6,7 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
 	declarations: [
-		NavbarComponent
+		NavbarComponent,
+		PageNotFoundComponent
 	],
 	imports: [
 		CommonModule,
@@ -14,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 		RouterModule
 	],
 	exports: [
-		NavbarComponent
+		NavbarComponent,
+		PageNotFoundComponent
 	]
 })
 export class SharedModule {}

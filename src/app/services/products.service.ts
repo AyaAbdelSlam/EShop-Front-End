@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment.prod';
-import { IProduct } from './../models/product';
+import { IProduct } from '../shared/models/product';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';

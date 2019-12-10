@@ -1,4 +1,4 @@
-import { IUser } from './../models/user';
+import { IUser } from '../shared/models/user';
 import { AuthService } from './../services/auth.service';
 import { NotificationService } from './../services/notification.service';
 import { Component, OnInit } from '@angular/core';
