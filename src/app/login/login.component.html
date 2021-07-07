@@ -1,0 +1,26 @@
+<div class="row login-body">
+  <div class="container">
+    <div class="login-content">
+      <form [formGroup]="loginForm" novalidate>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username" formControlName="username">
+          <!-- errors -->
+          <mat-error *ngIf="errorHandling('username', 'required')">
+            You must provide a Valid UserName
+          </mat-error>
+          <mat-error *ngIf="errorHandling('username', 'pattern')">
+            You must provide a username with no special char.
+          </mat-error>
+        </mat-form-field>
+      </form>
+
+      <!-- Submit -->
+      <div class="button-wrapper">
+        <button mat-raised-button (click)="submitForm()" color="primary" type="submit" class="button"
+          [disabled]="!loginForm.valid">Login
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

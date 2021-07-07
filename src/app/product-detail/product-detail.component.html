@@ -1,0 +1,22 @@
+<mat-card class="example-card">
+  <!-- <mat-card class="example-card" [routerLink]="'/login'"> -->
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{product.name}}</mat-card-title>
+    <mat-card-subtitle>{{product.price}}$</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a product item">
+  <mat-card-content>
+    <p>
+      {{product.fullDescription}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button><i class="material-icons">
+        favorite_border
+      </i></button>
+    <button mat-button><i class="material-icons">
+        add_shopping_cart
+      </i></button>
+  </mat-card-actions>
+</mat-card>
